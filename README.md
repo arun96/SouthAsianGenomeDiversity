@@ -12,7 +12,7 @@ We are currently working on a pre-print for this work (as of November 2023), so 
 
 ## Contact
 
-If you're coming here from my poster at ASHG, and want to leave a comment/note for me, please do so using the following form: [Contact Form for ASHG](https://docs.google.com/forms/d/1rbrBBXTupyRSqqrBFbuvgqbC6mOgn53jzAnOVLSAfxY/)
+If you're coming here from my poster, and want to leave a comment/note for me, please do so using the following form: [Contact Form](https://docs.google.com/forms/d/1rbrBBXTupyRSqqrBFbuvgqbC6mOgn53jzAnOVLSAfxY/)
 
 Otherwise, please send me an email or open an issue on this repository.
 
