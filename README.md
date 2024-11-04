@@ -4,9 +4,13 @@ This is our repository containing all links and materials relevant to ongoing ou
 
 This repository will contain links to all talks, posters and papers relevant to this work, as well as the analysis scripts and tools used in this project.
 
-We are currently working on a pre-print for this work (as of November 2023), so stay tuned for updates in the near future. In the meanwhile, we have linked past posters about this work below.
+We are currently working on a pre-print for this work, so stay tuned for updates in the near future. In the meanwhile, we have linked past posters about this work below.
 
 ## Past Presentations and Posters of this work
+
+BIODATA 2024 Poster - coming soon!
+
+[GI 2023 Poster](https://drive.google.com/file/d/1sMByc7kWJl9ipy14WLtpWlJ2mlwt0hOc/view?usp=sharing) - shown at the Genome Informatics 2023 Meeting @ CSHL.
 
 [ASHG 2023 Poster](https://drive.google.com/file/d/1N4YAV44Velab-i63iTrwN8bNHwAhO975/view?usp=sharing) - shown at the ASHG 2023 Meeting @ Washington DC.
 
