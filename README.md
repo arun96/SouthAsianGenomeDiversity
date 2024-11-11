@@ -8,7 +8,7 @@ We are currently working on a pre-print for this work, so stay tuned for updates
 
 ## Past Presentations and Posters of this work
 
-BIODATA 2024 Poster - coming soon!
+[BIODATA 2024 Poster](https://drive.google.com/file/d/1b5QrxCZGZ1VqBroGnVwDCJPVRb6DikzO/view?usp=sharing) - shown at the Biological Data Science 2024 Meeting @ CSHL
 
 [GI 2023 Poster](https://drive.google.com/file/d/1sMByc7kWJl9ipy14WLtpWlJ2mlwt0hOc/view?usp=sharing) - shown at the Genome Informatics 2023 Meeting @ CSHL.
 
@@ -16,7 +16,7 @@ BIODATA 2024 Poster - coming soon!
 
 ## Contact
 
-If you're coming here from my poster, and want to leave a comment/note for me, please do so using the following form: [Contact Form](https://docs.google.com/forms/d/1rbrBBXTupyRSqqrBFbuvgqbC6mOgn53jzAnOVLSAfxY/)
+If you're coming here from my poster, and want to leave a comment/note for me, please do so using the following form: [Arun Das SA Genomes Contact Form](https://docs.google.com/forms/d/1rbrBBXTupyRSqqrBFbuvgqbC6mOgn53jzAnOVLSAfxY/)
 
 Otherwise, please send me an email or open an issue on this repository.
 
