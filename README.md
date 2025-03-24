@@ -20,7 +20,7 @@ Our Anvil workspace can be found [here](https://anvil.terra.bio/#workspaces/anvi
 
 The supplementary tables referenced in the manuscript can be accessed [here](https://drive.google.com/drive/folders/1b2c1Xycqyr8_DPuFImsXIWtEAZlALJjy?usp=sharing). These tables include details of all genes intersected by the SAS and non-SAS placed contigs, and the top BLAST results of the unplaced contigs and the high scoring RNA-alignment contigs.
 
-Full size versions of all figures used in the manuscript and supplement can also be found in the same [folder](https://drive.google.com/drive/folders/1b2c1Xycqyr8_DPuFImsXIWtEAZlALJjy?usp=sharing)).
+Full size versions of all figures used in the manuscript and supplement can also be found in the same [folder](https://drive.google.com/drive/folders/1b2c1Xycqyr8_DPuFImsXIWtEAZlALJjy?usp=sharing).
 
 
 ## Past Presentations and Posters of this work
