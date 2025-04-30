@@ -29,8 +29,6 @@ workflow ComputeCoverageFlow {
   # Outputs a processed version
   output {
     File output_coverage = ComputeCoverageTask.coverage
-    # File output_coverage_calc = ComputeCoverageTask.coverage_calc
-    # File output_sortedBam = ComputeCoverageTask.sortedBam
   }
 
 }

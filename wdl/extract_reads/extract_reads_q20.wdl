@@ -28,14 +28,6 @@ workflow ExtractReadsFlow {
 
   #Outputs extracted reads and relevant files
   output {
-    # File output_unmapped_R1 = ExtractReadsTask.unmapped_R1
-    # File output_unmapped_R2 = ExtractReadsTask.unmapped_R2
-    # File output_mateMapped_R1 = ExtractReadsTask.mateMapped_R1
-    # File output_mateMapped_R2 = ExtractReadsTask.mateMapped_R2
-
-    # File output_unmapped = ExtractReadsTask.unmapped
-    # File output_unmapped_sorted = ExtractReadsTask.unmapped_sorted
-
     # File output_q20 = ExtractReadsTask.q20
     File output_q20_sorted = ExtractReadsTask.q20_sorted
     File output_q20_R1 = ExtractReadsTask.q20_R1
@@ -70,15 +62,6 @@ task ExtractReadsTask {
 
   # Calls samtools to do the extractions
   command <<<
-   
-    # samtools fastq -f 12 --reference ~{ref_fasta} ~{input_cram} -1 ~{sample_name}_unmapped_R1.fq -2 ~{sample_name}_unmapped_R2.fq --threads ~{num_threads}
-
-    # samtools fastq -f 68 -F 8 --reference ~{ref_fasta} ~{input_cram} --threads ~{num_threads} > ~{sample_name}_mateMapped_R1.fq
-
-    # samtools fastq -f 132 -F 8 --reference ~{ref_fasta} ~{input_cram} --threads ~{num_threads} > ~{sample_name}_mateMapped_R2.fq
-
-    # samtools view -b -f 4 --reference ~{ref_fasta} ~{input_cram} --threads ~{num_threads} > ~{sample_name}_unmapped.bam
-    # samtools sort ~{sample_name}_unmapped.bam -o ~{sample_name}_unmapped_sorted.bam --threads ~{num_threads}
 
     samtools view -h -b --reference ~{ref_fasta} ~{input_cram} -q 20 -o ~{sample_name}_greater_than_q20.bam -U ~{sample_name}_q20.bam --threads ~{num_threads}
     samtools sort ~{sample_name}_q20.bam -o ~{sample_name}_q20_sorted.bam --threads ~{num_threads}
@@ -99,14 +82,6 @@ task ExtractReadsTask {
     
   #Outputs a BAM and BAI with the same sample name
   output {
-    # File unmapped_R1 = "~{sample_name}_unmapped_R1.fq"
-    # File unmapped_R2 = "~{sample_name}_unmapped_R2.fq"
-    # File mateMapped_R1 = "~{sample_name}_mateMapped_R1.fq"
-    # File mateMapped_R2 = "~{sample_name}_mateMapped_R2.fq"
-
-    # File unmapped = "~{sample_name}_unmapped.bam"
-    # File unmapped_sorted = "~{sample_name}_unmapped_sorted.bam"
-
     # File q20 = "~{sample_name}_q20.bam"
     File q20_sorted = "~{sample_name}_q20_sorted.bam"
     File q20_R1 = "~{sample_name}_q20_R1.fq"

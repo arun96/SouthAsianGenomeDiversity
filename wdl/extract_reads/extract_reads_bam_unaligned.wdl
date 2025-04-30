@@ -32,12 +32,6 @@ workflow ExtractReadsFlow {
     File output_unmapped_R2 = ExtractReadsTask.unmapped_R2
     File output_mateMapped_R1 = ExtractReadsTask.mateMapped_R1
     File output_mateMapped_R2 = ExtractReadsTask.mateMapped_R2
-    # File output_unmapped = ExtractReadsTask.unmapped
-    # File output_unmapped_sorted = ExtractReadsTask.unmapped_sorted
-    # File output_q20 = ExtractReadsTask.q20
-    # File output_q20_sorted = ExtractReadsTask.q20_sorted
-    # File output_q20_R1 = ExtractReadsTask.q20_R1
-    # File output_q20_R2 = ExtractReadsTask.q20_R2
   }
 
 }
@@ -99,11 +93,5 @@ task ExtractReadsTask {
     File unmapped_R2 = "~{sample_name}_unmapped_R2.fq"
     File mateMapped_R1 = "~{sample_name}_mateMapped_R1.fq"
     File mateMapped_R2 = "~{sample_name}_mateMapped_R2.fq"
-    # File unmapped = "~{sample_name}_unmapped.bam"
-    # File unmapped_sorted = "~{sample_name}_unmapped_sorted.bam"
-    # File q20 = "~{sample_name}_q20.bam"
-    # File q20_sorted = "~{sample_name}_q20_sorted.bam"
-    # File q20_R1 = "~{sample_name}_q20_R1.fq"
-    # File q20_R2 = "~{sample_name}_q20_R1.fq"
   }
 }

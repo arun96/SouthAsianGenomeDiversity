@@ -65,10 +65,6 @@ task ExtractMapQTask {
     
     samtools view ~{input_cram} --reference ~{ref_fasta} | cut -f5 > ~{sample_name}.mapq.txt
     
-    
-    # samtools view ~{input_cram} | cut -f5 | sort | uniq -c | sort -k2n > ~{sample_name}.mapq.txt
-    # samtools view ~{input_cram} | cut -f5 | sort | uniq -c > ~{sample_name}.mapq.txt
-    
   >>>
 
   #Run time attributes:

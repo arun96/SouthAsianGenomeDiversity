@@ -58,7 +58,6 @@ task jellyfish_count_task {
 
     command <<<
        jellyfish count -C -m 21 -s 100G -t 12 <(zcat ~{reads1}) <(zcat ~{reads2}) -o ~{sample_name}_mer_counts.jf
-       # jellyfish count -C -m 21 -s 100G -t 12 ~{reads1} ~{reads2} -o ~{sample_name}_mer_counts.jf
 
        jellyfish histo ~{args} -t 12 ~{sample_name}_mer_counts.jf > ~{sample_name}_mer_counts.histo
 

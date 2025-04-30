@@ -59,13 +59,7 @@ task ExtractContigsTask {
   # Calls samtools to do the extractions
   command <<<
 
-    # count contig size
-    # cat  ~{assembly_fasta} | grep -c '.\{1000\}' > ~{sample_name}_contig_counts.txt
-    # cat  ~{assembly_fasta} | grep -c '.\{5000\}' >> ~{sample_name}_contig_counts.txt
-    # cat  ~{assembly_fasta} | grep -c '.\{10000\}' >> ~{sample_name}_contig_counts.txt
-
-    # Extract 1Kb contigs
-    # awk -v RS='>[^\n]+\n' 'length() >= 1000 {printf "%s", prt $0} {prt = RT}'  ~{assembly_fasta} > ~{sample_name}_contigs_1kb.fa
+    # Extract contigs
     awk -v n=~{contig_size} '/^>/{ if(l>n) print b; b=$0;l=0;next } {l+=length;b=b ORS $0}END{if(l>n) print b }' ~{assembly_fasta} > ~{sample_name}_contigs_~{contig_size_kb}kb.fa
     
   >>>
@@ -83,8 +77,6 @@ task ExtractContigsTask {
     
   #Outputs a BAM and BAI with the same sample name
   output {
-    # File collapsed_fasta = "~{sample_name}_collapsed.fa"
-    # File summary_file = "~{sample_name}_contig_counts.txt"
     File contigs_1kb_fasta = "~{sample_name}_contigs_~{contig_size_kb}kb.fa" 
   }
 }

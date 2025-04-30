@@ -137,13 +137,13 @@ task RunManta {
 	RuntimeAttr runtime_attr = select_first([runtime_attr_override, default_attr])
 
 	output {
-		# File vcf = "${sample_id}.manta.vcf.gz"
-		# File index = "${sample_id}.manta.vcf.gz.tbi"
+		File vcf = "${sample_id}.manta.vcf.gz"
+		File index = "${sample_id}.manta.vcf.gz.tbi"
 
 		# File vcf = "results/variants/${sample_id}.diploidSV.vcf.gz"
 		# File index = "results/variants/${sample_id}.diploidSV.vcf.gz.tbi"
 
-		File vcf = "results/variants/diploidSV.vcf.gz"
+		# File vcf = "results/variants/diploidSV.vcf.gz"
 
 	}
 	command <<<
@@ -176,20 +176,20 @@ task RunManta {
 		echo "Workflow Run"
 
 		# inversion conversion, then compression and index
-		# python2 /usr/local/bin/manta/libexec/convertInversion.py \
-		# 	/usr/local/bin/samtools \
-		# 	~{reference_fasta} \
-		# 	results/variants/diploidSV.vcf.gz \
-		# 	> diploidSV.vcf
+		python2 /usr/local/bin/manta/libexec/convertInversion.py \
+			/usr/local/bin/samtools \
+			~{reference_fasta} \
+			results/variants/diploidSV.vcf.gz \
+			> diploidSV.vcf
 
-		# bgzip -c diploidSV.vcf > ~{sample_id}.manta.vcf.gz && \
-		# 	tabix -p vcf ~{sample_id}.manta.vcf.gz
+		bgzip -c diploidSV.vcf > ~{sample_id}.manta.vcf.gz && \
+			tabix -p vcf ~{sample_id}.manta.vcf.gz
 
 		# Rename files
-		# mv results/variants/diploidSV.vcf.gz results/variants/~{sample_id}.diploidSV.vcf.gz
-		# mv results/variants/diploidSV.vcf.gz.tbi results/variants/~{sample_id}.diploidSV.vcf.gz.tbi
-		# cd results/variants/
-		# tabix -p vcf ~{sample_id}.manta.vcf.gz
+		mv results/variants/diploidSV.vcf.gz results/variants/~{sample_id}.diploidSV.vcf.gz
+		mv results/variants/diploidSV.vcf.gz.tbi results/variants/~{sample_id}.diploidSV.vcf.gz.tbi
+		cd results/variants/
+		tabix -p vcf ~{sample_id}.manta.vcf.gz
 		
 		
 	>>>

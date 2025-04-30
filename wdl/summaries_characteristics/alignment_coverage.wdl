@@ -65,11 +65,6 @@ task ComputeCoverageTask {
     # Samtools coverage - sort then call
     samtools sort ~{input_cram} --reference ~{ref_fasta} -o ~{sample_name}_sorted.cram --threads ~{num_threads}
     samtools coverage ~{sample_name}_sorted.cram --reference ~{ref_fasta} > ~{sample_name}.coverage
-
-    # Coverage across the entire file
-    # len = $(samtools view -H ~{input_cram} --reference ~{ref_fasta} | perl -nle'print if m{^@SQ}' | cut -f 3 -d ':' | awk '{sum+=$1} END {print sum}')
-    # len = $(samtools view -H ~{input_cram} --reference ~{ref_fasta} | grep -P '^@SQ' | cut -f 3 -d ':' | awk '{sum+=$1} END {print sum}')
-    # samtools depth -a ~{input_cram} --reference ~{ref_fasta} | awk -v NR="$len" '{sum+=$3} END { print "Average = ",sum/NR}' > ~{sample_name}.coverage
     
 
     # Calculated coverage
