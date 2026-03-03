@@ -12,7 +12,7 @@ All links relevant to this project (manuscript, past posters, workspaces and wor
 
 In the `wdl` folder, you can find all relevant WDL files used throughout our pipeline for aligning input reads, extracting unmapped reads, assembling and filtering the unmapped read contigs, placement against reference genomes, intersection with annotated regions and other `.bed` files, and any other miscellaneous scripts. These WDL files are divided into the relevant subfolders.
 
-In the `scripts` folder, you can find any relevant Python notebooks and analysis scripts from local or cluster analysis.
+In the `Guides` folder, you can detailed analysis notes for several of the stages of the project, complete with the exact syntax used and any other details needed.
 
 
 ### WDL Workflow Descriptions
