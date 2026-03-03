@@ -53,6 +53,20 @@ In the `Guides` folder, you can detailed analysis notes for several of the stage
 - `summaries_characteristics/extract_megahit_summary.wdl`: Outputs the summary from a MEGAHIT assembly.
 - `summaries_characteristics/extract_total_sequence_length.wdl`: Outputs the total sequence length of an input fasta file.
 
+### Guides
+
+Across 11 guides, we detail the syntax and tools used in key stages of our analysis pipeline.
+1. Alignment of reads against a chosen reference and the extraction of unaligned reads.
+2. The assembly of unaligned reads into contigs, and the use of Centrifuge and BLAST to filter these contigs for contaminants.
+3. Placement of these contigs against the reference genome.
+4. Studying the intersection of placed contigs against annotated elements in the genome and/or GWAS sites.
+5. Use of STAR to perform RNA-Seq alignment against these contigs.
+6. Querying of these contigs against the BLAST nt db.
+7. The assembly of personalized long read references and carrying out validation with long read data.
+8. All vs all alignment of the assembled contigs using Minimap2, with the goal of identifying shared sequences.
+9. Details of pangenome alignments.
+10. Benchmarking of existing tools for variant sequence detection: Manta, LUMPY and PopIns2.
+11. RepeatMasker usage to identify repeat elements in assembled contigs.
 
 ## Links
 
